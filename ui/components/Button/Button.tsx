@@ -1,6 +1,6 @@
 import { cva, type VariantProps } from 'class-variance-authority'
-
 import { twMerge } from 'tailwind-merge'
+import React, { ReactNode } from 'react'
 
 const button = cva(
   [
@@ -33,15 +33,53 @@ const button = cva(
   }
 )
 
-export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLAnchorElement>, VariantProps<typeof button> {
+type ButtonBaseProps = {
+  children: ReactNode
+  className?: string
+  intent?: 'primary' | 'secondary'
+  size?: 'sm' | 'lg'
   underline?: boolean
+}
+
+type ButtonAsButtonProps = ButtonBaseProps & React.ButtonHTMLAttributes<HTMLButtonElement> & {
+  href?: never
+}
+
+type ButtonAsLinkProps = ButtonBaseProps & React.AnchorHTMLAttributes<HTMLAnchorElement> & {
   href: string
 }
 
-export function Button({ className, intent, size, underline, ...props }: ButtonProps) {
-  return (
-    <a className={twMerge(button({ intent, size, className, underline }))} {...props}>
-      {props.children}
-    </a>
+export type ButtonProps = ButtonAsButtonProps | ButtonAsLinkProps
+
+export function Button(props: ButtonProps) {
+  const { 
+    children, 
+    className, 
+    intent = 'primary', 
+    size = 'lg', 
+    underline = false,
+    ...rest 
+  } = props
+
+  // Determine if it's an anchor or button based on the presence of href
+  const isAnchor = 'href' in rest
+
+  // Type assertion to resolve type incompatibility
+  const componentProps = isAnchor 
+    ? rest as React.AnchorHTMLAttributes<HTMLAnchorElement>
+    : rest as React.ButtonHTMLAttributes<HTMLButtonElement>
+
+  return React.createElement(
+    isAnchor ? 'a' : 'button',
+    {
+      ...componentProps,
+      className: twMerge(button({ 
+        intent, 
+        size, 
+        className, 
+        underline 
+      }))
+    },
+    children
   )
 }

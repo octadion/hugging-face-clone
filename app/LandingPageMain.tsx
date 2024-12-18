@@ -3,73 +3,15 @@ export default function LandingPageMain() {
     <main className="flex flex-1 flex-col">
       <div className="flex-1">
         <div className="container pb-32 pt-28 text-center 2xl:pb-40 2xl:pt-32">
-          <div className="mx-auto -mt-16 mb-12 flex items-center justify-center">
-            <div className="text-smd flex flex-wrap items-center rounded-lg bg-indigo-50 p-2 text-indigo-900 max-sm:justify-center sm:py-1 md:rounded-full">
-              <div className="mr-2 rounded-lg bg-indigo-200 px-1.5 text-xs font-semibold text-indigo-700 max-sm:mb-1.5">
-                NEW
-              </div>
-              <p>
-                Deploy
-                <a href="/meta-llama" className="font-semibold">
-                  LLama 2
-                </a>
-                (
-                <a
-                  className="underline decoration-indigo-200 hover:decoration-indigo-700"
-                  href="https://ui.endpoints.huggingface.co/new?repository=meta-llama%2FLlama-2-7b-chat-hf"
-                >
-                  Chat 7B
-                </a>
-                and
-                <a
-                  className="underline decoration-indigo-200 hover:decoration-indigo-700"
-                  href="https://ui.endpoints.huggingface.co/new?repository=meta-llama%2FLlama-2-13b-chat-hf"
-                >
-                  13B
-                </a>
-                ) in a few clicks on
-                <svg
-                  className="ml-0.5 inline -translate-y-px"
-                  width="1em"
-                  height="1em"
-                  viewBox="0 0 74 75"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    fillRule="evenodd"
-                    clipRule="evenodd"
-                    d="M46.6517 14.9309C48.2799 11.0495 45.4292 6.76251 41.2202 6.76251H24.1817C19.8066 6.76251 15.9021 9.50789 14.4218 13.6249L8.51785 30.0453C6.77792 34.8844 6.77792 40.1785 8.51785 45.0177L14.4218 61.438C15.9021 65.5551 19.8066 68.3004 24.1817 68.3004H41.2202C45.4292 68.3004 48.2799 64.0134 46.6517 60.132L40.7616 46.0903C38.465 40.6155 38.465 34.4475 40.7616 28.9727L46.6517 14.9309Z"
-                    fill="#861FFF"
-                    stroke="black"
-                    strokeWidth="12.6835"
-                    strokeLinejoin="round"
-                  ></path>
-                  <circle
-                    cx="53.1334"
-                    cy="37.5315"
-                    r="13.9518"
-                    fill="#FF3270"
-                    stroke="black"
-                    strokeWidth="12.6835"
-                    strokeLinejoin="round"
-                  ></circle>
-                </svg>
-                <a href="/inference-endpoints" className="underline decoration-indigo-200 hover:decoration-indigo-700">
-                  Inference Endpoints
-                </a>
-              </p>
-            </div>
-          </div>
-          <img className="mx-auto mb-4 h-24 w-24" src="/front/assets/huggingface_logo-noborder.svg" alt="" />
+          <img className="mx-auto mb-4 h-24 w-24" src="/front/assets/logo-jmi-rw.png" alt="" />
           <h1 className="mx-auto max-w-xl text-4xl font-bold text-gray-900 dark:text-gray-100 md:text-6xl">
-            The AI community building the future.
+            JAGR AI Team
           </h1>
           <p className="mx-auto mt-6 max-w-md text-lg text-gray-500">
             Build, train and deploy state of the art models powered by the reference open source in machine learning.
           </p>
           <div className="mt-12 flex items-center justify-center">
-            <a href="https://github.com/huggingface/transformers" className="btn -mr-1 text-lg font-bold">
+            <a href="https://github.com/jagr-ai" className="btn -mr-1 text-lg font-bold">
               <svg
                 className="mr-2 dark:text-gray-200"
                 xmlns="http://www.w3.org/2000/svg"
@@ -93,7 +35,7 @@ export default function LandingPageMain() {
               <div className="from-gray-100-to-white dark:border-gray-850 absolute -left-1 top-3.5 z-[-1] h-3 w-3 flex-none rotate-45 rounded-sm border border-gray-200 bg-gradient-to-t dark:bg-gray-900"></div>
               <a
                 className="btn inset-0 text-lg font-bold dark:hover:text-yellow-500"
-                href="https://github.com/huggingface/transformers"
+                href="https://github.com/jagr-ai"
               >
                 108,050
               </a>
@@ -102,23 +44,24 @@ export default function LandingPageMain() {
         </div>
         <div className="mx-auto max-w-5xl px-4 pb-16 text-center 2xl:max-w-6xl">
           <div className="rounded-lg-b rounded-lg-gray-200 -mb-3.5 border border-gray-100"></div>
-          <div className="font-sm mb-6 inline-block bg-white px-4 text-gray-500">
-            More than 5,000 organizations are using Hugging Face
+          <div className="font-sm mb-6 inline-block bg-white text-black 
+                          dark:bg-dark-background dark:text-white px-4 text-gray-500">
+            Powered by:
           </div>
           <div className="grid gap-3 text-left md:grid-cols-2 lg:grid-cols-4">
             <article className="overview-card-wrapper ">
-              <a className="flex flex-1 items-center overflow-hidden p-2" href="/allenai">
+              <a className="flex flex-1 items-center overflow-hidden p-2" href="/openai">
                 <img
-                  alt="Allen Institute for AI's profile picture"
+                  alt="OpenAI"
                   className="mr-3 h-8 w-8 flex-none rounded-lg"
-                  src="https://aeiljuispo.cloudimg.io/v7/https://cdn-uploads.huggingface.co/production/uploads/1584460628617-5e70f0eb8ce3c604d78fe130.png?w=200&amp;h=200&amp;f=face"
+                  src="front/assets/openai-icon-2021x2048-4rpe5x7n.png"
                 />
                 <div className="overflow-hidden leading-tight">
-                  <h4 className="flex items-center font-semibold " title="Allen Institute for AI">
-                    <span className="truncate">Allen Institute for AI</span>
+                  <h4 className="flex items-center font-semibold " title="OpenAI">
+                    <span className="truncate">OpenAI</span>
                   </h4>
                   <div className="truncate text-sm leading-tight text-gray-400">
-                    <span className="capitalize">non-profit</span>
+                    <span className="capitalize">Company</span>
                     <span className="px-0.5 text-xs text-gray-300">•</span>
                     193 models
                   </div>
@@ -182,15 +125,15 @@ export default function LandingPageMain() {
               </a>
             </article>
             <article className="overview-card-wrapper ">
-              <a className="flex flex-1 items-center overflow-hidden p-2" href="/Intel">
+              <a className="flex flex-1 items-center overflow-hidden p-2" href="/OCI">
                 <img
-                  alt="Intel's profile picture"
+                  alt="OCI"
                   className="mr-3 h-8 w-8 flex-none rounded-lg"
-                  src="https://aeiljuispo.cloudimg.io/v7/https://cdn-uploads.huggingface.co/production/uploads/1616186257611-60104afcc75e19ac1738fe70.png?w=200&amp;h=200&amp;f=face"
+                  src="/front/assets/download (20).png"
                 />
                 <div className="overflow-hidden leading-tight">
                   <h4 className="flex items-center font-semibold " title="Intel">
-                    <span className="truncate">Intel</span>
+                    <span className="truncate">OCI Generative AI</span>
                   </h4>
                   <div className="truncate text-sm leading-tight text-gray-400">
                     <span className="capitalize">company</span>
@@ -201,15 +144,15 @@ export default function LandingPageMain() {
               </a>
             </article>
             <article className="overview-card-wrapper ">
-              <a className="flex flex-1 items-center overflow-hidden p-2" href="/speechbrain">
+              <a className="flex flex-1 items-center overflow-hidden p-2" href="/huggingface">
                 <img
-                  alt="SpeechBrain's profile picture"
+                  alt="Huggingface"
                   className="mr-3 h-8 w-8 flex-none rounded-lg"
-                  src="https://aeiljuispo.cloudimg.io/v7/https://cdn-uploads.huggingface.co/production/uploads/1663000279893-60243f18c1f3c79f98e4b382.png?w=200&amp;h=200&amp;f=face"
+                  src="front/assets/hf-logo.svg"
                 />
                 <div className="overflow-hidden leading-tight">
-                  <h4 className="flex items-center font-semibold " title="SpeechBrain">
-                    <span className="truncate">SpeechBrain</span>
+                  <h4 className="flex items-center font-semibold " title="HuggingFace">
+                    <span className="truncate">Hugging Face</span>
                   </h4>
                   <div className="truncate text-sm leading-tight text-gray-400">
                     <span className="capitalize">non-profit</span>
@@ -239,18 +182,18 @@ export default function LandingPageMain() {
               </a>
             </article>
             <article className="overview-card-wrapper ">
-              <a className="flex flex-1 items-center overflow-hidden p-2" href="/grammarly">
+              <a className="flex flex-1 items-center overflow-hidden p-2" href="/ollama">
                 <img
                   alt="Grammarly's profile picture"
                   className="mr-3 h-8 w-8 flex-none rounded-lg"
-                  src="https://aeiljuispo.cloudimg.io/v7/https://cdn-uploads.huggingface.co/production/uploads/1611152856266-5dd96eb166059660ed1ee413.png?w=200&amp;h=200&amp;f=face"
+                  src="front/assets/ollama.png"
                 />
                 <div className="overflow-hidden leading-tight">
                   <h4 className="flex items-center font-semibold " title="Grammarly">
-                    <span className="truncate">Grammarly</span>
+                    <span className="truncate">Ollama</span>
                   </h4>
                   <div className="truncate text-sm leading-tight text-gray-400">
-                    <span className="capitalize">company</span>
+                    <span className="capitalize">non-profit</span>
                     <span className="px-0.5 text-xs text-gray-300">•</span>6 models
                   </div>
                 </div>
@@ -259,7 +202,7 @@ export default function LandingPageMain() {
           </div>
         </div>
       </div>
-      <div className="overflow-hidden bg-gradient-to-b from-white via-red-200/20 to-indigo-200/20 pt-14 dark:from-gray-950 dark:to-gray-900">
+      {/* <div className="overflow-hidden bg-gradient-to-b from-white via-red-200/20 to-indigo-200/20 pt-14 dark:from-gray-950 dark:to-gray-900">
         <div className="container grid gap-x-6 gap-y-12 lg:grid-cols-3 lg:gap-y-0">
           <div className="lg:-mt-6 lg:self-center lg:pr-12">
             <div className="flex flex-col">
@@ -330,7 +273,7 @@ export default function LandingPageMain() {
             />
           </div>
         </div>
-      </div>
+      </div> */}
       <div className="max-w-full overflow-hidden border-y border-gray-100 bg-gradient-to-br py-24 dark:from-gray-950 dark:to-gray-900 md:py-32">
         <div className="container grid grid-cols-1 gap-y-12 md:grid-cols-4 md:gap-y-0">
           <div className="pr-12 md:col-span-1">
@@ -378,11 +321,22 @@ export default function LandingPageMain() {
               </a>
             </div>
           </div>
-          <div className="relative ml-auto flex space-x-3 bg-gradient-to-b from-white via-purple-100/40 to-white md:col-span-3">
+          <div className="relative ml-auto flex space-x-3 
+              bg-gradient-to-b from-white via-purple-100/40 to-white 
+              dark:bg-gradient-to-b dark:from-gray-900 dark:via-gray-800/40 dark:to-gray-900 
+              md:col-span-3"
+            >
             <div className="-ml-16 flex space-x-2 md:-ml-0">
               <div className="first:hidden 2xl:first:block">
                 <a
-                  className="transition:all dark:hover:brightness-120 relative flex h-52 w-[9.24rem] flex-none flex-col items-center justify-center rounded-xl border border-gray-100 bg-gradient-to-br from-white to-white p-3 shadow-none duration-100 hover:translate-y-1 hover:shadow-inner hover:brightness-[102%] dark:from-gray-800 dark:to-gray-900 dark:!shadow-none"
+                  className="transition:all dark:hover:brightness-120 relative flex h-52 w-[9.24rem] flex-none flex-col items-center justify-center 
+                  rounded-xl border border-gray-100 
+                  bg-gradient-to-br from-white to-white 
+                  p-3 shadow-none duration-100 
+                  hover:translate-y-1 hover:shadow-inner hover:brightness-[102%] 
+                  dark:border-gray-700
+                  dark:from-gray-800 dark:to-gray-900 
+                  dark:!shadow-none"
                   style={{ boxShadow: '0 0px 16px 0 rgb(68 195 255 / 8%)' }}
                   href="/tasks/audio-classification"
                 >
@@ -578,121 +532,6 @@ export default function LandingPageMain() {
                   <header className="mb-2 text-center text-lg font-semibold leading-5">Translation</header>
                   <p className="text-sm text-gray-400">2,579 models</p>
                 </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="border-b border-gray-100 bg-gradient-to-bl from-purple-50 via-white to-blue-100/40 py-16 dark:from-gray-950 dark:to-gray-900 md:py-32">
-        <div className="container grid gap-6 lg:grid-cols-3">
-          <div className="lg:place-self-center lg:pr-12">
-            <div className="flex flex-col">
-              <svg
-                className="text-lg text-blue-400"
-                xmlns="http://www.w3.org/2000/svg"
-                xmlnsXlink="http://www.w3.org/1999/xlink"
-                aria-hidden="true"
-                focusable="false"
-                role="img"
-                width="1em"
-                height="1em"
-                preserveAspectRatio="xMidYMid meet"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  className="uim-quaternary"
-                  d="M12 14.195c-.176 0-.348-.046-.5-.133l-9-5.198a1 1 0 0 1 0-1.732l9-5.194c.31-.177.69-.177 1 0l9 5.194a1 1 0 0 1 0 1.732l-9 5.198a1.002 1.002 0 0 1-.5.133z"
-                  opacity=".25"
-                  fill="currentColor"
-                ></path>
-                <path
-                  className="uim-tertiary"
-                  d="M21.5 11.132l-1.964-1.134l-7.036 4.064c-.31.178-.69.178-1 0L4.464 9.998L2.5 11.132a1 1 0 0 0 0 1.732l9 5.198c.31.178.69.178 1 0l9-5.198a1 1 0 0 0 0-1.732z"
-                  opacity=".5"
-                  fill="currentColor"
-                ></path>
-                <path
-                  className="uim-primary"
-                  d="M21.5 15.132l-1.964-1.134l-7.036 4.064c-.31.178-.69.178-1 0l-7.036-4.064L2.5 15.132a1 1 0 0 0 0 1.732l9 5.198c.31.178.69.178 1 0l9-5.198a1 1 0 0 0 0-1.732z"
-                  fill="currentColor"
-                ></path>
-              </svg>
-              <div className="h-2"></div>
-              <div className="flex items-center rounded-lg">
-                <div>
-                  <p className="font-mono text-sm text-gray-500">Open Source</p>
-                  <h2 className="false text-2xl font-semibold leading-tight text-gray-800">Transformers</h2>
-                </div>
-              </div>
-              <div className="h-6"></div>
-              <p className="leading-snug text-gray-500">
-                Transformers is our natural language processing library and our hub is now open to all ML models, with
-                support from libraries like
-                <a target="_blank" className="underline" href="https://github.com/flairNLP/flair" rel="noreferrer">
-                  Flair
-                </a>
-                ,
-                <a
-                  target="_blank"
-                  className="underline"
-                  href="https://github.com/asteroid-team/asteroid"
-                  rel="noreferrer"
-                >
-                  Asteroid
-                </a>
-                ,
-                <a target="_blank" className="underline" href="https://github.com/espnet/espnet" rel="noreferrer">
-                  ESPnet
-                </a>
-                ,
-                <a
-                  target="_blank"
-                  className="underline"
-                  href="https://github.com/pyannote/pyannote-audio"
-                  rel="noreferrer"
-                >
-                  Pyannote
-                </a>
-                , and more to come.
-              </p>
-              <div className="h-6"></div>
-              <a
-                href="https://huggingface.co/transformers"
-                className="mt-auto self-start border-b border-gray-600 pb-0.5 text-gray-800 hover:border-gray-400 hover:text-gray-500"
-              >
-                Read documentation
-              </a>
-            </div>
-          </div>
-          <div className="order-first gap-4 overflow-hidden rounded-lg object-cover md:order-none lg:col-span-2">
-            <div className="dark:from-gray-925 flex items-center justify-center from-blue-100/20 to-blue-100/30 p-0 dark:to-gray-950 md:rounded-xl md:bg-gradient-to-b md:p-12">
-              <div className="relative w-full overflow-hidden rounded-xl border border-gray-100 bg-gradient-to-br from-white to-white shadow-sm dark:from-gray-900 dark:to-gray-800 ">
-                <div className="absolute left-4 top-4 flex space-x-1.5">
-                  <div className="h-2.5 w-2.5 cursor-pointer rounded-full bg-red-500 shadow-xl hover:bg-red-600"></div>
-                  <div className="h-2.5 w-2.5 cursor-pointer rounded-full bg-orange-300 shadow-xl hover:bg-orange-400 dark:bg-orange-500 dark:hover:bg-orange-600"></div>
-                  <div className="h-2.5 w-2.5 cursor-pointer rounded-full bg-green-500 shadow-xl hover:bg-green-600"></div>
-                </div>
-                <div className="pointer-events-none w-full truncate px-20 pt-3 text-center text-xs text-gray-300 dark:text-gray-600">
-                  huggingface@transformers:~
-                </div>
-                <div className="px-4 pb-5 pt-3.5" translate="no">
-                  <pre className="overflow-x-auto text-xs md:text-sm ">
-                    <code className="leading-relaxed text-gray-600 md:leading-normal">
-                      {/* <!-- HTML_TAG_START --> */}
-                      <span className="hljs-keyword">from</span>
-                      <span className="hljs-name">transformers</span>
-                      <span className="hljs-keyword">import</span>
-                      <span className="hljs-name">AutoTokenizer</span>,
-                      <span className="hljs-name">AutoModelForMaskedLM</span>
-                      <span className="hljs-name">tokenizer</span>= <span className="hljs-name">AutoTokenizer</span>.
-                      <span className="hljs-title">from_pretrained</span>(
-                      <span className="hljs-string">{`"bert-base-uncased"`}</span>)
-                      <span className="hljs-name">model</span>=<span className="hljs-name">AutoModelForMaskedLM</span>.
-                      <span className="hljs-title">from_pretrained</span>(
-                      <span className="hljs-string">{`"bert-base-uncased"`}</span>){/* <!-- HTML_TAG_END --> */}
-                    </code>
-                  </pre>
-                </div>
               </div>
             </div>
           </div>
@@ -1161,7 +1000,8 @@ export default function LandingPageMain() {
               development of technology for the better.
             </p>
           </div>
-          <div className="bg-white">
+          <div className="bg-white text-black 
+                          dark:bg-dark-background dark:text-white">
             <div className="mb-6 flex h-36 items-center justify-center rounded-lg bg-gradient-to-r from-pink-50 to-white shadow-inner dark:from-gray-900 dark:to-gray-950">
               <p className="text-6xl">🌸</p>
             </div>
@@ -1191,7 +1031,8 @@ export default function LandingPageMain() {
               </a>
             </div>
           </div>
-          <div className="bg-white">
+          <div className="bg-white text-black 
+                          dark:bg-dark-background dark:text-white">
             <div className="mb-6 flex h-36 items-center justify-center rounded-lg bg-gradient-to-r from-green-50 to-white shadow-inner dark:from-gray-900 dark:to-gray-950">
               <p className="text-6xl">🐎</p>
             </div>
@@ -1214,106 +1055,6 @@ export default function LandingPageMain() {
                 className="mt-auto self-start border-b border-gray-600 pb-0.5 text-gray-800 hover:border-gray-400 hover:text-gray-500"
               >
                 Read more
-              </a>
-            </div>
-          </div>
-          <div className="bg-white">
-            <div className="mb-6 flex h-36 items-center justify-center rounded-lg bg-gradient-to-r from-teal-50 to-white shadow-inner dark:from-gray-900 dark:to-gray-950">
-              <p className="text-6xl">📚</p>
-            </div>
-            <div className="flex flex-col">
-              <div className="flex items-center rounded-lg">
-                <div>
-                  <p className="font-mono text-sm text-gray-500">HMTL</p>
-                  <h3 className="false font-semibold leading-tight text-gray-800">Hierarchical Multi-Task Learning</h3>
-                </div>
-              </div>
-              <div className="h-6"></div>
-              <p className="leading-snug text-gray-500">
-                Learning embeddings from semantic tasks for multi-task learning. We have open-sourced code and a demo.
-              </p>
-              <div className="h-6"></div>
-              <a
-                href="https://arxiv.org/abs/1811.06031"
-                className="mt-auto self-start border-b border-gray-600 pb-0.5 text-gray-800 hover:border-gray-400 hover:text-gray-500"
-              >
-                Read more
-              </a>
-            </div>
-          </div>
-          <div className="bg-white">
-            <div className="mb-6 flex h-36 items-center justify-center rounded-lg bg-gradient-to-r from-indigo-50 to-white shadow-inner dark:from-gray-900 dark:to-gray-950">
-              <p className="text-6xl">🐸</p>
-            </div>
-            <div className="flex flex-col">
-              <div className="flex items-center rounded-lg">
-                <div>
-                  <p className="font-mono text-sm text-gray-500">Dynamical Language Models</p>
-                  <h3 className="false font-semibold leading-tight text-gray-800">
-                    Meta-learning for language modeling
-                  </h3>
-                </div>
-              </div>
-              <div className="h-6"></div>
-              <p className="leading-snug text-gray-500">
-                A meta learner is trained via gradient descent to continuously and dynamically update language model
-                weights.
-              </p>
-              <div className="h-6"></div>
-              <a
-                href="https://arxiv.org/abs/1803.10631"
-                className="mt-auto self-start border-b border-gray-600 pb-0.5 text-gray-800 hover:border-gray-400 hover:text-gray-500"
-              >
-                Read more
-              </a>
-            </div>
-          </div>
-          <div className="bg-white">
-            <div className="mb-6 flex h-36 items-center justify-center rounded-lg bg-gradient-to-r from-pink-50 to-white shadow-inner dark:from-gray-900 dark:to-gray-950">
-              <p className="text-6xl">🤖</p>
-            </div>
-            <div className="flex flex-col">
-              <div className="flex items-center rounded-lg">
-                <div>
-                  <p className="font-mono text-sm text-gray-500">State of the art</p>
-                  <h3 className="false font-semibold leading-tight text-gray-800">Neuralcoref</h3>
-                </div>
-              </div>
-              <div className="h-6"></div>
-              <p className="leading-snug text-gray-500">
-                Our open source coreference resolution library for coreference. You can train it on your own dataset and
-                language.
-              </p>
-              <div className="h-6"></div>
-              <a
-                href="/coref"
-                className="mt-auto self-start border-b border-gray-600 pb-0.5 text-gray-800 hover:border-gray-400 hover:text-gray-500"
-              >
-                Read more
-              </a>
-            </div>
-          </div>
-          <div className="bg-white">
-            <div className="mb-6 flex h-36 items-center justify-center rounded-lg bg-gradient-to-r from-purple-50 via-purple-50 to-white shadow-inner dark:from-gray-900 dark:to-gray-950">
-              <p className="text-7xl">🦄</p>
-            </div>
-            <div className="flex flex-col">
-              <div className="flex items-center rounded-lg">
-                <div>
-                  <p className="font-mono text-sm text-gray-500">Auto-complete your thoughts</p>
-                  <h3 className="false font-semibold leading-tight text-gray-800">Write with Transformers</h3>
-                </div>
-              </div>
-              <div className="h-6"></div>
-              <p className="leading-snug text-gray-500">
-                This web app is the official demo of the Transformers repository &#39;s text generation capabilities.
-              </p>
-              <div className="h-6"></div>
-              <a
-                href="https://transformer.huggingface.co/"
-                className="mt-auto self-start border-b border-gray-600 pb-0.5 text-gray-800 hover:border-gray-400 hover:text-gray-500"
-              >
-                Start writing
               </a>
             </div>
           </div>

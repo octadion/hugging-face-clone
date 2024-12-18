@@ -26,7 +26,7 @@ export default function LeftTabsLayout() {
   return (
     <section
       className={classNames(
-        'pt-8 border-gray-100 bg-white lg:static lg:px-0 lg:col-span-4 xl:col-span-3 lg:border-r lg:bg-gradient-to-l from-gray-50-to-white',
+        'pt-8 border-gray-100 bg-white text-black dark:bg-dark-background dark:text-white lg:static lg:px-0 lg:col-span-4 xl:col-span-3 lg:border-r lg:bg-gradient-to-l from-gray-50-to-white',
         isAddFilterModalDisplay ? 'fixed overflow-y-auto overflow-x-hidden z-40 inset-0 !px-4 !pt-4' : 'hidden lg:block'
       )}
     >
@@ -64,7 +64,8 @@ export default function LeftTabsLayout() {
         {currentTab === 'Licenses' && <TabLicenses />}
         {currentTab === 'Other' && <TabOther />}
       </div>
-      <div className="fixed inset-x-4 bottom-0 flex h-16 items-center border-t bg-white dark:bg-gray-950 lg:hidden">
+      <div className="fixed inset-x-4 bottom-0 flex h-16 items-center border-t bg-white text-black 
+                      dark:bg-dark-background dark:text-white dark:bg-gray-950 lg:hidden">
         <button className="btn btn-lg -mt-px w-full font-semibold" type="button">
           <ApplySVG />
           Apply filters

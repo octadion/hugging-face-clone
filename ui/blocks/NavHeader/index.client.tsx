@@ -4,14 +4,19 @@ import { useEffect, useState } from 'react'
 import MoreNav from './MoreNav.client'
 import SearchBar from './SearchBar.client'
 import { AppNavList } from './constant'
+import { ThemeToggle } from 'ui/theme/ThemeToggle'
 import AllNavInSmallScreen from './AllNavInSmallScreen.client'
 
 export default function NavHeader() {
   const [isSearchBarShow, setIsSearchBarShow] = useState<boolean>(false)
   const [isMoreNavShow, setIsMoreNavShow] = useState<boolean>(false)
   const [isAllNavInSmallScreenShow, setIsAllNavInSmallScreenShow] = useState<boolean>(false)
+  const [isLoggedIn, setIsLoggedIn] = useState<boolean | null>(null)
 
   useEffect(() => {
+    const token = localStorage.getItem('token')
+    setIsLoggedIn(!!token)
+
     const handleResize = () => {
       setIsAllNavInSmallScreenShow(false)
     }
@@ -23,6 +28,15 @@ export default function NavHeader() {
     }
   }, [])
 
+  const handleLogout = () => {
+    localStorage.removeItem('token')
+    window.location.href = '/login'
+  }
+  if (isLoggedIn === null) {
+    // Overlay loading state, menggunakan absolute positioning agar tidak mengganggu layout header
+    return null
+  }
+
   return (
     <div className="SVELTE_HYDRATER contents" data-props='{"isWide":false,"isZh":true}' data-target="MainHeader">
       <header className="border-b border-gray-100">
@@ -32,9 +46,9 @@ export default function NavHeader() {
               <img
                 alt="Hugging Face's logo"
                 className="w-7 md:mr-2"
-                src="/front/assets/huggingface_logo-noborder.svg"
+                src="/front/assets/logo-jmi-rw.png"
               />
-              <span className="hidden whitespace-nowrap text-lg font-bold md:block">Hugging Face</span>
+              <span className="hidden whitespace-nowrap text-lg font-bold md:block">JAGR AI</span>
             </a>
             <div className="relative mr-2 flex-1 sm:mr-4 lg:mr-6 lg:max-w-sm">
               <input
@@ -138,51 +152,6 @@ export default function NavHeader() {
                   </li>
                 )
               })}
-              {/* <li>
-                <a
-                  className="group flex items-center px-2 py-0.5 hover:text-red-700 dark:hover:text-gray-400"
-                  href="/datasets"
-                >
-                  
-                  Datasets
-                </a>
-              </li>
-              <li>
-                <a
-                  className="group flex items-center px-2 py-0.5 hover:text-blue-700 dark:hover:text-gray-400"
-                  href="/spaces"
-                >
-                  
-                  Spaces
-                </a>
-              </li>
-              <li>
-                <a
-                  className="group flex items-center px-2 py-0.5 hover:text-yellow-700 dark:hover:text-gray-400"
-                  href="/docs"
-                >
-                  
-                  Docs
-                </a>
-              </li>
-              <li>
-                <div className="relative ">
-                  <button
-                    className="group flex items-center px-2 py-0.5 hover:text-green-700 dark:hover:text-gray-400 "
-                    type="button"
-                  >
-                    Solutions
-                  </button>
-                </div>
-              </li>
-              <li>
-                <a
-                  className="group flex items-center px-2 py-0.5 hover:text-gray-500 dark:hover:text-gray-400"
-                  href="/pricing"
-                >
-                  Pricing
-                </a>
-              </li> */}
               <li>
                 <div className="group relative">
                   <button
@@ -239,7 +208,9 @@ export default function NavHeader() {
               <li>
                 <hr className="h-5 w-0.5 border-none bg-gray-100 dark:bg-gray-800" />
               </li>
-              <li>
+              {!isLoggedIn ? (
+                <>
+                  <li>
                 <a
                   className="block cursor-pointer px-2 py-0.5 hover:text-gray-500 dark:hover:text-gray-400"
                   href="/login"
@@ -250,11 +221,27 @@ export default function NavHeader() {
               <li>
                 <a
                   className="rounded-full border border-transparent bg-gray-900 px-3 py-1 leading-none text-white hover:border-black hover:bg-white hover:text-black"
-                  href="/join"
+                  href="/signup"
                 >
                   Sign Up
                 </a>
               </li>
+              </>
+              ) : (
+                <li>
+                <button
+                  onClick={handleLogout}
+                  className="rounded-full border border-transparent bg-red-600 px-3 py-1 leading-none bg-white text-black 
+                          dark:bg-dark-background dark:text-whitehover:border-red-700 hover:bg-white hover:text-red-700"
+                >
+                  Logout
+                </button>
+              </li>
+            )}
+              <div className="flex items-center">
+                {/* Tambahkan ThemeToggle di sini */}
+                <ThemeToggle />
+              </div>
             </ul>
           </nav>
         </div>
