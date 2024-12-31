@@ -19,9 +19,9 @@ export default function AllNavInSmallScreen() {
                   src="https://aeiljuispo.cloudimg.io/v7/https://cdn-uploads.huggingface.co/production/uploads/noauth/ixdrkZU00TY737tBSZzvK.jpeg?w=200&amp;h=200&amp;f=face"
                   alt=""
                 />
-                <a className="group leading-tight" href="/hylerrix">
+                <a className="group leading-tight" href="/">
                   <div className="text-xs text-gray-500">Profile</div>{' '}
-                  <div className="group-hover:underline">hylerrix</div>
+                  <div className="group-hover:underline">User</div>
                 </a>
                 <a
                   href="/notifications"

@@ -1,6 +1,6 @@
-import { DatasetItem, DatasetsTabItem } from './type'
+import { ModelItem, ModelsTabItem } from './type'
 
-export const DatasetList: DatasetItem[] = [...Array(30)].map(() => ({
+export const ModelList: ModelItem[] = [...Array(30)].map(() => ({
   title: 'fka/awesome-chatgpt-prompts',
   tableType: 'viewer',
   dateTime: '2023-03-07T10:04:18',
@@ -10,9 +10,9 @@ export const DatasetList: DatasetItem[] = [...Array(30)].map(() => ({
   favorites: '2.81k',
 }))
 
-export const DatasetsTabList: DatasetsTabItem[] = ['Tasks', 'Sub-tasks', 'Languages', 'Licenses']
+export const ModelsTabList: ModelsTabItem[] = ['Tasks', 'Sub-tasks', 'Languages', 'Licenses']
 
-export const DatasetOther = [
+export const ModelOther = [
   'Trained with AutoTrain',
   'art',
   'code',
@@ -25,7 +25,7 @@ export const DatasetOther = [
   'climate',
 ]
 
-export const DatasetSubTasks = [
+export const ModelSubTasks = [
   'language-modeling',
   'multi-class-classification',
   'extractive-qa',
@@ -92,7 +92,7 @@ export const DatasetSubTasks = [
   'document-question-answering',
 ]
 
-export const DatasetsLicense = [
+export const ModelsLicense = [
   'mit',
   'apache-2.0',
   'cc-by-4.0',
@@ -161,7 +161,7 @@ export const DatasetsLicense = [
   'deepfloyd-if-license',
 ]
 
-export const DatasetLanguages = [
+export const ModelLanguages = [
   'English',
   'Chinese',
   'French',

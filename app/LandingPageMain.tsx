@@ -92,7 +92,7 @@ export default function LandingPageMain() {
                 <img
                   alt="Amazon Web Services's profile picture"
                   className="mr-3 h-8 w-8 flex-none rounded-lg"
-                  src="https://aeiljuispo.cloudimg.io/v7/https://cdn-uploads.huggingface.co/production/uploads/1625068211554-5e67de201009063689407481.png?w=200&amp;h=200&amp;f=face"
+                  src="/front/assets/Amazon_Web_Services-Logo.wine.png"
                 />
                 <div className="overflow-hidden leading-tight">
                   <h4 className="flex items-center font-semibold " title="Amazon Web Services">
@@ -110,7 +110,7 @@ export default function LandingPageMain() {
                 <img
                   alt="Google's profile picture"
                   className="mr-3 h-8 w-8 flex-none rounded-lg"
-                  src="https://aeiljuispo.cloudimg.io/v7/https://cdn-uploads.huggingface.co/production/uploads/5dd96eb166059660ed1ee413/WtA3YYitedOr9n02eHfJe.png?w=200&amp;h=200&amp;f=face"
+                  src="/front/assets/goolge-icon.png"
                 />
                 <div className="overflow-hidden leading-tight">
                   <h4 className="flex items-center font-semibold " title="Google">
@@ -202,7 +202,7 @@ export default function LandingPageMain() {
           </div>
         </div>
       </div>
-      {/* <div className="overflow-hidden bg-gradient-to-b from-white via-red-200/20 to-indigo-200/20 pt-14 dark:from-gray-950 dark:to-gray-900">
+      <div className="overflow-hidden bg-gradient-to-b from-white via-red-200/20 to-indigo-200/20 pt-14 dark:from-gray-950 dark:to-gray-900">
         <div className="container grid gap-x-6 gap-y-12 lg:grid-cols-3 lg:gap-y-0">
           <div className="lg:-mt-6 lg:self-center lg:pr-12">
             <div className="flex flex-col">
@@ -251,7 +251,7 @@ export default function LandingPageMain() {
               </p>
               <div className="h-6"></div>
               <a
-                href="/join"
+                href="/signup"
                 className="mt-auto self-start border-b border-gray-600 pb-0.5 text-gray-800 hover:border-gray-400 hover:text-gray-500"
               >
                 Sign Up
@@ -273,7 +273,7 @@ export default function LandingPageMain() {
             />
           </div>
         </div>
-      </div> */}
+      </div>
       <div className="max-w-full overflow-hidden border-y border-gray-100 bg-gradient-to-br py-24 dark:from-gray-950 dark:to-gray-900 md:py-32">
         <div className="container grid grid-cols-1 gap-y-12 md:grid-cols-4 md:gap-y-0">
           <div className="pr-12 md:col-span-1">
@@ -1008,23 +1008,19 @@ export default function LandingPageMain() {
             <div className="flex flex-col">
               <div className="flex items-center rounded-lg">
                 <div>
-                  <p className="font-mono text-sm text-gray-500">T0</p>
+                  <p className="font-mono text-sm text-gray-500">AI by Hand</p>
                   <h3 className="false font-semibold leading-tight text-gray-800">
-                    Multitask Prompted Training Enables Zero-Shot Task Generalization
+                  Understanding Transformer by Hand: A Step-by-Step Guide to LLMs Foundations
                   </h3>
                 </div>
               </div>
               <div className="h-6"></div>
               <p className="leading-snug text-gray-500">
-                Open source state-of-the-art zero-shot language model out of
-                <a href="https://bigscience.huggingface.co/" target="_blank" rel="noreferrer">
-                  BigScience
-                </a>
-                .
-              </p>
+                Transformer by hand: Behind LLMs architecture
+                </p>
               <div className="h-6"></div>
               <a
-                href="https://bigscience.huggingface.co/blog/t0"
+                href="https://medium.com/gopenai/understanding-transformer-by-hand-a-step-by-step-guide-to-llms-foundations-e91fb42a320a"
                 className="mt-auto self-start border-b border-gray-600 pb-0.5 text-gray-800 hover:border-gray-400 hover:text-gray-500"
               >
                 Read more
@@ -1039,19 +1035,19 @@ export default function LandingPageMain() {
             <div className="flex flex-col">
               <div className="flex items-center rounded-lg">
                 <div>
-                  <p className="font-mono text-sm text-gray-500">DistilBERT</p>
+                  <p className="font-mono text-sm text-gray-500">Building Blocks of AI</p>
                   <h3 className="false font-semibold leading-tight text-gray-800">
-                    DistilBERT, a distilled version of BERT: smaller, faster, cheaper and lighter
+                   Building Blocks of AI: Chapter 1 — A Deep Dive into Linear Models
                   </h3>
                 </div>
               </div>
               <div className="h-6"></div>
               <p className="leading-snug text-gray-500">
-                A smaller, faster, lighter, cheaper version of BERT obtained via model distillation.
+                Linear Models, the fundamental building blocks of AI.
               </p>
               <div className="h-6"></div>
               <a
-                href="https://medium.com/huggingface/distilbert-8cf3380435b5"
+                href="https://medium.com/gopenai/building-blocks-of-ai-chapter-1-a-deep-dive-into-linear-models-49be98724fe9"
                 className="mt-auto self-start border-b border-gray-600 pb-0.5 text-gray-800 hover:border-gray-400 hover:text-gray-500"
               >
                 Read more

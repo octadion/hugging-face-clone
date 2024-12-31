@@ -1,7 +1,7 @@
-// app/datasets/ContentLayout/DatasetsHeader.tsx
+// app/models/ContentLayout/ModelsHeader.tsx
 import { FilterSVG, InnerDatasetSVG, SortSVG } from 'ui/svgs'
 
-interface DatasetsHeaderProps {
+interface ModelsHeaderProps {
   totalCount: number
   searchQuery: string
   onSearchChange: (query: string) => void
@@ -9,17 +9,17 @@ interface DatasetsHeaderProps {
   onSortChange: (sort: string) => void
 }
 
-export function DatasetsHeader({ 
+export function ModelsHeader({ 
   totalCount,
   searchQuery,
   onSearchChange,
   sortBy,
   onSortChange
-}: DatasetsHeaderProps) {
+}: ModelsHeaderProps) {
   return (
     <div className="mb-4 items-center space-y-3 md:flex md:space-y-0 lg:mb-6">
       <div className="flex items-center text-lg">
-        <h1>Datasets</h1>
+        <h1>Models</h1>
         <div className="ml-3 w-16 font-normal text-gray-400">{totalCount}</div>
       </div>
       <div className="flex-1 md:mx-4">
@@ -34,7 +34,7 @@ export function DatasetsHeader({
           />
         </div>
       </div>
-      {/* <a href="/search/full-text?type=dataset" className="btn mr-2 rounded-full text-sm opacity-80 hover:opacity-100">
+      {/* <a href="/search/full-text?type=model" className="btn mr-2 rounded-full text-sm opacity-80 hover:opacity-100">
         <span className="mr-1.5 rounded bg-blue-500/10 px-1 text-xs leading-tight text-blue-700 dark:text-blue-200">
           new
         </span>

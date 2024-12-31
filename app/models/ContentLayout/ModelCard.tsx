@@ -1,16 +1,16 @@
 import { DatasetSVG, DownloadSVG, FavoriteSVG, TablePreviewSVG, TableViewerSVG } from 'ui/svgs'
-import { DatasetItem } from '../type'
+import { ModelItem } from '../type'
 
-export interface DatasetCardProps {
-  item: DatasetItem
+export interface ModelCardProps {
+  item: ModelItem
 }
 
-export default function DatasetCard({ item }: DatasetCardProps) {
+export default function ModelCard({ item }: ModelCardProps) {
   const { title, tableType, dateTime, timeTitle, date, downloads, favorites } = item
 
   return (
     <article className="overview-card-wrapper group  ">
-      <a className="block p-2" href={`https://huggingface.co/datasets/${title}`}>
+      <a className="block p-2" href={`https://huggingface.co/${title}`}>
         <header className="flex items-center mb-0.5" title={title}>
           <DatasetSVG />
           <h4 className="text-md truncate font-mono text-black dark:group-hover:text-yellow-500 group-hover:text-red-600 text-smd">

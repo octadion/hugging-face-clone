@@ -1,60 +1,58 @@
-import SpacesFilter from './components/SpacesFilter'
-import SpacesCard from './components/SpacesCard'
-import { Space } from './types'
+'use client';
 
-const mockSpaces: Space[] = [
-  {
-    id: '1',
-    title: 'Quiz Generator',
-    author: 'JAGR AI',
-    likes: 1245,
-    description: 'Quiz Generator',
-    tags: ['AI', 'Quiz Generator', 'Agent'],
-    thumbnail: '🤖',
-    url: 'http://127.0.0.1:7860/'
-  },
-  {
-    id: '2',
-    title: 'Language Model',
-    author: 'OpenAI',
-    likes: 2345,
-    description: 'Powerful text generation AI',
-    tags: ['AI', 'NLP', 'LLM'],
-    thumbnail: '💬',
-    url: ''
-  },
-  {
-    id: '3',
-    title: 'Love AI',
-    author: 'Romantic Tech',
-    likes: 987,
-    description: 'AI that understands emotions',
-    tags: ['AI', 'Emotion', 'NLP'],
-    thumbnail: '❤️',
-    url: ''
-  },
-  {
-    id: '4',
-    title: 'Unique Algorithm',
-    author: 'Tech Innovators',
-    likes: 654,
-    description: 'Groundbreaking AI approach',
-    tags: ['AI', 'Algorithm', 'Innovation'],
-    thumbnail: '🌟',
-    url: ''
-  }
-]
+import { useState, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
+import SpacesFilter from './components/SpacesFilter';
+import SpacesCard from './components/SpacesCard';
+import { fetchSpaces } from '../api/spaces/route';
+import Link from 'next/link';
 
 export default function SpacesPage() {
+  const [spaces, setSpaces] = useState([]);
+  const router = useRouter();
+
+  useEffect(() => {
+    const token = localStorage.getItem('token');
+
+    if (!token) {
+      router.push('/login');
+      return;
+    }
+
+    const fetchData = async () => {
+      try {
+        const data = await fetchSpaces(token);
+        console.log(data)
+        setSpaces(data);
+      } catch (error) {
+        console.error('Failed to fetch spaces:', error);
+      }
+    };
+
+    fetchData();
+  }, [router]);
+
   return (
     <div className="py-8">
       <SpacesFilter />
-      
-      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
-        {mockSpaces.map(space => (
-          <SpacesCard key={space.id} space={space} />
-        ))}
-      </div>
+
+      {spaces.length === 0 ? (
+        <div className="text-center text-gray-500 py-8">
+          Tidak ada spaces tersedia.
+        </div>
+      ) : (
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          {spaces.map(space => (
+            <Link 
+            href={`/spaces/${space.id}`}
+            key={space.id}
+            className="block"
+          >
+            <SpacesCard space={space} />
+          </Link>
+          ))}
+        </div>
+      )}
     </div>
-  )
+  );
 }

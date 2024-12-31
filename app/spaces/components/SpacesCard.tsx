@@ -14,12 +14,10 @@ function getEmojiGradient(emoji: string) {
     '🍀': ['from-green-100', 'to-emerald-200', 'dark:from-green-900', 'dark:to-emerald-950'],
   };
 
-  // Jika emoji memiliki gradient khusus, gunakan itu
   if (emojiColorMap[emoji]) {
     return emojiColorMap[emoji];
   }
 
-  // Jika tidak ada, buat gradien random
   const colors: [string, string, string, string][] = [
     ['from-red-50', 'to-red-200', 'dark:from-red-900', 'dark:to-red-950'],
     ['from-blue-50', 'to-blue-200', 'dark:from-blue-900', 'dark:to-blue-950'],
@@ -31,7 +29,6 @@ function getEmojiGradient(emoji: string) {
     ['from-indigo-50', 'to-indigo-200', 'dark:from-indigo-900', 'dark:to-indigo-950'],
   ];
 
-  // Gunakan hash sederhana untuk membuat gradien konsisten untuk emoji yang sama
   const hash = emoji.charCodeAt(0) % colors.length;
   return colors[hash];
 }

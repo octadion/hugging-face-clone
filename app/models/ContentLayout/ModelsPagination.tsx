@@ -1,19 +1,19 @@
-// app/datasets/ContentLayout/DatasetsPagination.tsx
+// app/Models/ContentLayout/ModelsPagination.tsx
 import { NextPageSVG, PreviousPageSVG } from 'ui/svgs'
 
-interface DatasetsPaginationProps {
+interface ModelsPaginationProps {
   currentPage: number;
   hasNext: boolean;
   hasPrev: boolean;
   onPageChange: (page: number) => void;
 }
 
-export function DatasetsPagination({
+export function ModelsPagination({
   currentPage,
   hasNext,
   hasPrev,
   onPageChange
-}: DatasetsPaginationProps) {
+}: ModelsPaginationProps) {
   const handlePageChange = (newPage: number) => {
     onPageChange(newPage)
     window.scrollTo({ top: 0, behavior: 'smooth' })

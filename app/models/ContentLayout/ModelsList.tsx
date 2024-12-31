@@ -1,17 +1,17 @@
-// app/datasets/ContentLayout/DatasetsList.tsx
+// app/models/ContentLayout/ModelsList.tsx
 "use client";
 import { useState } from 'react'
-import DatasetCard from './DatasetCard'
-import { DatasetsPagination } from './DatasetsPagination'
-import { DatasetsHeader } from './DatasetsHeader'
-import { useDatasets } from '../hooks/useDatasets'
+import ModelCard from './ModelCard'
+import { ModelsPagination } from './ModelsPagination'
+import { ModelsHeader } from './ModelsHeader'
+import { useModels } from '../hooks/useModels'
 
-export default function DatasetsList() {
+export default function ModelsList() {
   const [currentPage, setCurrentPage] = useState(1)
   const [searchQuery, setSearchQuery] = useState('')
   const [sortBy, setSortBy] = useState('trending')
 
-  const { datasets, isLoading, error, pagination, setPage } = useDatasets({
+  const { models, isLoading, error, pagination, setPage } = useModels({
     initialPage: currentPage,
     sort: sortBy,
     search: searchQuery
@@ -22,12 +22,12 @@ export default function DatasetsList() {
   }
 
   if (error) {
-    return <div>Error loading datasets: {error.message}</div>
+    return <div>Error loading Models: {error.message}</div>
   }
 
   return (
     <section className="pt-8 border-gray-100 col-span-full lg:col-span-6 xl:col-span-7 pb-12">
-      <DatasetsHeader 
+      <ModelsHeader 
         totalCount={pagination.totalItems}
         searchQuery={searchQuery}
         onSearchChange={setSearchQuery}
@@ -38,14 +38,15 @@ export default function DatasetsList() {
         {isLoading ? (
           <div>Loading...</div>
         ) : (
-          <div className="grid grid-cols-1 gap-5 xl:grid-cols-2">
-            {datasets.map((datasetItem) => (
-              <DatasetCard key={datasetItem.title} item={datasetItem} />
+          <div className="grid grid-cols-1 gap-5">
+            {models.map((modelItem) => (
+              <ModelCard key={modelItem.title} item={modelItem} />
             ))}
           </div>
+
         )}
       </div>
-      <DatasetsPagination 
+      <ModelsPagination 
         currentPage={pagination.currentPage}
         hasNext={pagination.hasNext}
         hasPrev={pagination.hasPrev}

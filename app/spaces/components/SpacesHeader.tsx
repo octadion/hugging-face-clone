@@ -5,20 +5,20 @@ import { useState } from 'react';
 import Link from 'next/link';
 
 export default function SpacesHeader() {
-  const [activeTab, setActiveTab] = useState('trending');
+  // const [activeTab, setActiveTab] = useState('trending');
 
-  const tabs = [
-    { id: 'trending', label: 'Trending' },
-    { id: 'recent', label: 'Recent' },
-    { id: 'most-liked', label: 'Most Liked' },
-  ];
+  // const tabs = [
+  //   { id: 'trending', label: 'Trending' },
+  //   { id: 'recent', label: 'Recent' },
+  //   { id: 'most-liked', label: 'Most Liked' },
+  // ];
 
   return (
     <header className="border-b dark:border-gray-700 bg-white dark:bg-dark-background">
       <div className="container mx-auto px-4 py-4">
         <h1 className="text-3xl font-bold mb-4 dark:text-white">Spaces</h1>
         
-        <div className="flex space-x-4 border-b dark:border-gray-700">
+        {/* <div className="flex space-x-4 border-b dark:border-gray-700">
           {tabs.map((tab) => (
             <button
               key={tab.id}
@@ -33,7 +33,7 @@ export default function SpacesHeader() {
               {tab.label}
             </button>
           ))}
-        </div>
+        </div> */}
       </div>
     </header>
   )
